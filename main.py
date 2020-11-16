@@ -33,6 +33,12 @@ while not player:
     else:
         print("That's not a valid play. Check your spelling!")
 
-        # player was set to True, but we want it to be False so the loop continues
+    # ask for rematch
+    rematch = input('Want to try it again? (Y/N)')
+    if rematch.lower() == 'y':
+        # set player to False so the while loop continues
         player = False
+        # reassign an option to the computer
         computer = options[randint(0, 2)]
+    else:
+        print('Alright, was fun buddy!')
