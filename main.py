@@ -1,16 +1,17 @@
 from random import randint
 
-#create a list of play options
+# create a list of play options
 options = ['Rock', 'Paper', 'Scissors']
 
-#assign a random play to the computer
+# assign a random play to the computer
 computer = options[randint(0, 2)]
 
-#set player to false
+# set player to false
 player = False
 
-while player == False:
-    #set player to True
+# while player is false
+while not player:
+    # set player to True
     player = input('Rock, Paper, Scissors?')
     if player == computer:
         print('Tie!')
@@ -32,6 +33,6 @@ while player == False:
     else:
         print("That's not a valid play. Check your spelling!")
 
-        #player was set to True, but we want it to be False so the loop continues
+        # player was set to True, but we want it to be False so the loop continues
         player = False
         computer = options[randint(0, 2)]
